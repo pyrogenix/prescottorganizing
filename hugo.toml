@@ -1,0 +1,22 @@
+baseURL = "https://mynewhugosite.com"
+title = "Prescott Organizing"
+theme = "hugo-starter"
+
+[menu]
+  [[menu.main]]
+    identifier = "services"
+    name = "Services"
+    url = "/services"
+    weight = 20
+
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about"
+    weight = 10
+
+  [[menu.main]]
+    identifier = "gallery"
+    name = "Gallery"
+    url = "/gallery"
+    weight = 30

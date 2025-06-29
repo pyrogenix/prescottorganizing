@@ -7,11 +7,15 @@
   }
   
 .center { 
-    align-items: center;
+    /* align-items: center;
     align-self: center;
-    align-content: center;
+    align-content: center; */
     text-align: center;
     margin: 0 auto;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 /* LAYOUT */
@@ -115,7 +119,7 @@ body {
     color: var(--text-norm)
 }
 
-.info-head{
+.info-head {
     color: var(--text-norm);
     letter-spacing: 1px;
     font-size: 1.5rem;
@@ -127,9 +131,13 @@ body {
     max-width: 25rem;
 }
 
+#tel {
+    color: var(--text-norm);
+}
+
 #email {
     color: var(--text-norm);
-    text-decoration: none;
+    /* text-decoration: underline; */
 }
 
 /* OTHER */
@@ -161,3 +169,74 @@ body {
     width: 100%;
 }
 
+.service {
+    font-family: "Playfair Display", serif;
+    font-weight: 600;
+    font-size: 2rem;
+    color: var(--text-dark);
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    text-decoration: underline;
+    text-decoration-thickness: .2rem;
+}
+
+.service-section {
+    font-size: 3rem;
+}
+
+.pricing {
+    font-family: "Playfair Display", serif;
+    font-weight: 600;
+    font-size: 2rem;
+    color: var(--text-dark);
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+li.li {
+    margin: 0;
+	padding: 1rem 0 1rem 4rem;
+	list-style: none;
+    background-image: url("../media/bullet-gr.png");
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-size: 40px;
+}
+
+#active-page {
+    /* color: var(--text-light); */
+    text-decoration: underline var(--text-light);
+    /* text-decoration-style:double; */
+    text-decoration-thickness: 2px;
+}
+
+.main-text {
+    display: block;
+    text-align: justify !important;
+    text-justify: inter-word !important;
+}
+
+.service-nav {
+    font-size: 2rem;
+    display: flex;
+    width: 100%;
+    justify-content: space-between !important;
+}
+
+.link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.link:hover {
+    color: var(--text-light) !important;
+}
+
+.sublink {
+    text-decoration: none;
+    color: var(--text-dark);
+}
+
+.sublink:hover {
+    color: var(--text-light);
+}

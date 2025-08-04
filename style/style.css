@@ -147,7 +147,8 @@ body {
     padding-bottom: 1rem;
     padding-left: 2rem;
     padding-right: 2rem;
-    color: var(--text-wh-norm)
+    color: var(--text-wh-norm);
+    align-content: center;
 }
 
 .info-head {
@@ -191,7 +192,7 @@ body {
 
 .tagline{
     margin-top: 30vh;
-    margin-bottom: 40vh;
+    margin-bottom: 55vh;
     text-shadow: 2px 2px 1px var(--text-norm);
     color: var(--text-wh-norm)
 }
@@ -260,7 +261,8 @@ li.li {
 }
 
 .main-block {
-    margin-top: 12em;
+    /* margin-top: 100vh; */
+    display: block;
     /* padding-top: 4em; */
 }
 
@@ -316,6 +318,8 @@ li.li {
 
 .w-border {
     border: 2px solid white;
+    padding: 1em 1em 1em 2em;
+    border-radius: 30px;
 }
 
 .test-left {
@@ -378,21 +382,79 @@ li.li {
     border-radius: 8px;
 }
 
+.contact-row {
+    display: flex;
+    justify-content: space-between;
+    gap: .5vw;
+    margin: 2em 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact-box {
+    flex: 1;
+    background-color: var(--text-wh-light); /* example background */
+    padding: 1em;
+    border-radius: 10px;
+    display: flex;
+    align-items: center; /* vertically center icon and text */
+    min-height: 100px; /* ensures equal height even with smaller text */
+    box-sizing: border-box;
+    border: 4px solid var(--text-dark);
+    position: relative;
+    margin-bottom: 1em;
+    
+}
+
+.contact-box:hover {
+    background-color: var(--text-wh-dark);
+}
+
+.nav-icon {
+    color: var(--text-dark);
+    flex-shrink: 0;
+    margin-right: 1em;
+    z-index: 1;
+    padding-left: .5em;
+}
+
+.contact-link {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: var(--text-wh-norm);
+  }
+  
+.contact-details {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    font-size: 120%;
+    color: var(--text-dark);
+}
+
+.contact-details.email {
+    font-size: 120%;
+}
+
 /* RESPONSIVE CSS */
 
 @media screen and (max-width:2000px) {
     .main-block {
-        margin-top: 6em;
+        margin-top: 0em;
     }
 }
 
 @media screen and (max-width:1200px) {
     .main {
         max-width: 80vw;
-    }
-    .tagline{
-        margin-top: 15vh;
-        margin-bottom: 30vh;
     }
     .service-nav {
         flex-direction: column;
@@ -404,6 +466,25 @@ li.li {
     }
     .portrait {
         max-width: 8em;
+    }
+
+    .logo{
+        font-size: 1.8rem;
+    }
+
+    .nav-link {
+        font-size: 140%;
+    }
+
+    .tagline {
+        margin-top: 40vh;
+        margin-top: 40svh;
+        /* margin-bottom: 0px; */
+    }
+
+    .info-box {
+        padding-left: .5em;
+        padding-right: .5em;
     }
 }
 
@@ -435,10 +516,196 @@ li.li {
     .logo{
         font-size: 1.8rem;
     }
+
+    .contact-row {
+        flex-direction: column;
+    }
+
+    .contact-details {
+        font-size: 120%; /* smaller font size on mobile */
+    }
+
+    .contact-details.email {
+        font-size: 80%; /* even smaller for email */
+    }
+
+    .nav-icon {
+        font-size: 1.2rem !important;
+    }
+
+    .tagline {
+        margin-top: 20vh;
+        margin-bottom: 25vh;
+    }
+
+    .portrait {
+        max-width: 6em;
+    }
+
 }
 
-@media (max-width: 480px) {
+@media (max-width: 2000px) {
+    .tagline {
+        margin-top: 30vh;
+        margin-bottom: 40vh;
+    }
+
+}
+
+@media (max-width: 420px) {
     .gallery {
         grid-template-columns: 1fr;
     }
+    .tagline {
+        margin-top: 10vh;
+        margin-bottom: 15vh;
+    }
+
+}
+
+@media (max-width: 420px) and (max-height: 900px) {
+    .tagline {
+        margin-top: 10vh;
+        margin-bottom: 25vh;
+    }
+
+    .contact-details.email {
+        overflow-wrap: anywhere;
+    }
+}
+
+@media (max-width: 1290px) and (max-height: 850px) {
+    .nav-link {
+        font-size: 100% !important;
+        align-content: center;
+    }
+
+    .logo {
+        font-size: 100%;
+    }
+}
+
+@media (max-width: 1100px) and (max-height: 700px) {
+    .tagline {
+        margin-top: 10vh;
+        margin-bottom: 45vh;
+    }
+
+    .contact-details.email {
+        overflow-wrap: anywhere;
+    }
+}
+
+@media (max-width: 800px) and (max-height: 1100px) {
+    .tagline {
+        margin-top: 10vh;
+        margin-bottom: 50vh;
+    }
+
+    .contact-details.email {
+        font-size: 120%;
+    }
+
+    .nav-icon {
+        font-size: 2em !important;
+    }
+}
+
+@media (max-width: 600px) and (max-height: 800px) {
+    .tagline {
+        margin-top: 10vh;
+        margin-bottom: 30vh;
+    }
+
+    .contact-details.email {
+        font-size: 100%;
+    }
+
+    .nav-icon {
+        font-size: 1.5em !important;
+    }
+}
+
+@media (max-width: 420px) and (max-height: 990px) {
+    .tagline {
+        margin-top: 10vh;
+        margin-bottom: 35vh;
+    }
+
+    .contact-details.email {
+        overflow-wrap: anywhere;
+    }
+
+    .contact-details.email {
+        font-size: 80%;
+    }
+
+    .nav-icon {
+        font-size: 1.2em !important;
+    }
+}
+
+@media (max-width: 440px) and (max-height: 940px) {
+    .tagline {
+        margin-top: 10vh;
+        margin-bottom: 35vh;
+    }
+
+    .contact-details.email {
+        overflow-wrap: anywhere;
+    }
+
+    .contact-details.email {
+        font-size: 80%;
+    }
+
+    .nav-icon {
+        font-size: 1.2em !important;
+    }
+
+    .top-img {
+        width: 100vw;
+    }
+}
+
+@media (max-width: 380px) and (max-height: 750px) {
+    .tagline {
+        margin-top: 10vh;
+        margin-bottom: 25vh;
+    }
+
+    .contact-details.email {
+        overflow-wrap: anywhere;
+    }
+
+    .contact-details.email {
+        font-size: 100%;
+    }
+
+    .nav-icon {
+        font-size: 1em !important;
+    }
+}
+
+@media (max-width: 400px) and (max-height: 690px) {
+    .tagline {
+        margin-top: 10vh;
+        margin-bottom: 25vh;
+    }
+
+    .contact-details.email {
+        font-size: 70%;
+    }
+
+    .nav-icon {
+        font-size: 1em !important;
+    }
+
+}
+
+@media (max-width: 500px) {
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
 }

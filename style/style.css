@@ -839,9 +839,14 @@ li.li {
 }
 
 .logo {
+    position: absolute;
+    top: -1em;
+    left: -1.5em;
     font-size: 2em;
     line-height: 1.2;
     white-space: normal;
+    width: 16em;
+    height: auto;
 }
 
 .nav-link {

@@ -9,7 +9,7 @@
   <meta name="description" content="Schedule a Home Organization Consultation | Prescott Organizing in Prescott, AZ”">
 
 
-  <link rel="stylesheet" href="style/style.css?v=1.0.3" type="text/css" media="all" />
+  <link rel="stylesheet" href="style/style.css?v=1.0.4" type="text/css" media="all" />
   <link rel="icon" type="image/x-icon" href="media/favicon/favicon.ico">
 
   <!-- Link to Google Fonts -->
@@ -55,7 +55,92 @@
               </a>
             </div>
         </div>
-        <h3 class="center" id="srvlink"><a href="/services" class="link ul">See our full list of home organizing services in the Prescott Tri-City Area</a></h3>
+
+        <!-- CONTACT FORM -->
+        <form action="https://formspree.io/f/mjkjvnyr" method="POST" class="contactform">
+          <label class="cfitem">
+            First Name
+            <span class="mark-req">*</span>
+            <input type="text" name="first" class="cfinput" required>
+          </label>
+          <label class="cfitem">
+            Last Name
+            <span class="mark-req">*</span>
+            <input type="text" name="last" class="cfinput" required>
+          </label class="cfitem">
+          <label class="cfitem">
+            Email Address
+            <span class="mark-req">*</span>
+            <input type="email" name="email" class="cfinput" required>
+          </label>
+          <label class="cfitem">
+            Phone
+            <input type="tel" name="phone" class="cfinput">
+          </label>
+          <label class="cfitem">
+            Address Line 1
+            <span class="mark-req">*</span>
+            <input type="text" name="address" class="cfinput" required>
+          </label>
+          <label class="cfitem">
+            Address Line 2
+            <input type="text" name="address-2" class="cfinput">
+          </label>
+          <label class="cfitem">
+            City
+            <span class="mark-req">*</span>
+            <input type="text" name="city" class="cfinput" required>
+          </label>
+          <label class="cfitem">
+            State
+            <span class="mark-req">*</span>
+            <input type="text" name="state" class="cfinput" required>
+          </label>
+          <label class="cfitem">
+            Postal Code
+            <span class="mark-req">*</span>
+            <input type="text" name="zip" class="cfinput" required>
+          </label>
+          <label class="cfitem">
+            Your message
+            <span class="mark-req">*</span>
+            <textarea name="message" class="cfinput" required></textarea>
+          </label>
+          <label class="cfitem" for="refer">
+            Referred By
+            <span class="mark-req">*</span>
+            <select name="refer" class="dropdown" required>
+              <option value="" disabled selected>Select your option</option>
+              <option value="wom">Word of Mouth</option>
+              <option value="google">Google</option>
+              <option value="soc">Social Media</option>
+              <option value="other">Other</option>
+            </select>
+          </label>
+          <label class="cfitem" for="refer">
+            Preferred Contact Method
+            <span class="mark-req">*</span>
+            <select name="pref-contact" class="dropdown" required>
+              <option value="" disabled selected>Select your option</option>
+              <option value="phone">Phone</option>
+              <option value="email">Email</option>
+              <option value="text">Text</option>
+            </select>
+          </label>
+          <label class="cfitem" for="refer">
+            Availability
+            <span class="mark-req">*</span>
+            <select name="availability" class="dropdown" required>
+              <option value="" disabled selected>Select your option</option>
+              <option value="weekday">Weekday</option>
+              <option value="weekend">Weekend</option>
+              <option value="variable">Variable</option>
+            </select>
+          </label>
+          <button type="submit" class="cfsubmit">Send</button>
+        </form>
+        <br><br>
+        <span class="mark-req">*</span> indicates a field is required
 
         <hr class="qline">
         
